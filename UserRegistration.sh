@@ -52,5 +52,18 @@ function MobileNumber()
 		echo "not okay"
 	fi
 }
-MobileNumber
+#MobileNumber
+
+function password()
+{
+	read -p "Enter password :  " password
+	local pattern="^[a-zA-Z]{8,}$"
+	if [[ $password =~ $pattern ]]
+	then
+		echo "okay"
+	else
+		echo "not okay"
+	fi
+}
+password
 
