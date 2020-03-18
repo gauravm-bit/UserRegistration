@@ -13,7 +13,7 @@ function FirstName()
 			echo "not okay"
 		fi
 	}
-FirstName
+#FirstName
 
 function LastName()
 	{
@@ -26,4 +26,17 @@ function LastName()
 			echo "not okay"
 		fi
 	}
-LastName
+#LastName
+
+function ValidEmail()
+	{
+		read -p "Enter valid email address : " email
+		local pattern="^[a-z]{1,}([.]?[a-z]{1,})?[@]{1}[a-z]{1,}[.]{1}[a-z]{1,}([.]?[a-z]{2,})?$"
+		if [[ $email =~ $pattern ]]
+		then
+			echo "okay"
+		else
+			echo "not okay"
+		fi
+	}
+ValidEmail
