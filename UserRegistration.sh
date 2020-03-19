@@ -54,16 +54,17 @@ function MobileNumber()
 }
 #MobileNumber
 
-function password()
+function Password()
 {
 	read -p "Enter password :  " password
-	local pattern="^[a-zA-Z]{8,}$"
-	if [[ $password =~ $pattern ]]
+	local pattern1="^[a-zA-Z]{8,}$"
+	local pattern2=".*[A-Z].*$"
+	if [[ $password =~ $pattern1 && $password =~ $pattern2 ]]
 	then
 		echo "okay"
 	else
 		echo "not okay"
 	fi
 }
-password
+Password
 
