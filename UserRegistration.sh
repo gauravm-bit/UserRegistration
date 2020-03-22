@@ -31,7 +31,7 @@ function LastName()
 function ValidEmail()
 	{
 		read -p "Enter valid email address : " email
-		local pattern="^[a-z]{1,}([.]?[a-z]{1,})?[@]{1}[a-z]{1,}[.]{1}[a-z]{1,}([.]?[a-z]{2,})?$"
+		local pattern="^[a-z]{1,}([.]?[-]?[+]?[a-z0-9]{1,})?[@]{1}[a-z0-9]{1,}[.]{1}[a-z]{1,}([.]?[a-z]{2,})?$"
 		if [[ $email =~ $pattern ]]
 		then
 			echo "okay"
@@ -39,7 +39,7 @@ function ValidEmail()
 			echo "not okay"
 		fi
 	}
-#ValidEmail
+ValidEmail
 
 function MobileNumber()
 {
@@ -68,5 +68,5 @@ function Password()
 		echo "not okay"
 	fi
 }
-Password
+#Password
 
